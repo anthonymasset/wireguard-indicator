@@ -1,0 +1,187 @@
+# French translations for WireGuard Indicator package.
+# Copyright (C) 2020 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the WireGuard Indicator package.
+# Lorenzo <atareao@atareao.es>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WireGuard Indicator - 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-20 07:27+0200\n"
+"PO-Revision-Date: 2021-02-03 11:16+0100\n"
+"Last-Translator: Anthony MASSET <anthony@avalone-fr.com>\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: schemas/wireguard-indicator.gschema.xml:6
+msgid "Service name"
+msgstr "Nom du service"
+
+#: schemas/wireguard-indicator.gschema.xml:7
+msgid "Set the name of the systemd service"
+msgstr "Nom du service systemd"
+
+#: schemas/wireguard-indicator.gschema.xml:11
+msgid "Check time"
+msgstr "Intervalle de vérification"
+
+#: schemas/wireguard-indicator.gschema.xml:12
+msgid "Set the check time to test the WireGuard status"
+msgstr "Indiquer l'intervalle de vérification de l'état du service Wireguard"
+
+#: schemas/wireguard-indicator.gschema.xml:16
+msgid "Dark theme"
+msgstr "Thème sombre"
+
+#: schemas/wireguard-indicator.gschema.xml:17
+msgid "Enable dark theme otherwise light theme"
+msgstr "Activer le thème sombre"
+
+#: extension.js:79
+msgid "Wireguard status"
+msgstr "Etat du service Wireguard"
+
+#: extension.js:81 extension.js:165
+msgid "Enable WireGuard"
+msgstr "Activer Wireguard"
+
+#: extension.js:91
+msgid "Settings"
+msgstr "Paramètres"
+
+#: extension.js:162
+msgid "Disable WireGuard"
+msgstr "Désactiver WireGuard"
+
+#: extension.js:211
+msgid "Help"
+msgstr "Aide"
+
+#: extension.js:213
+msgid "Project Page"
+msgstr "Page du projet"
+
+#: extension.js:215
+msgid "Get help online..."
+msgstr "Obtenir de l'aide en ligne..."
+
+#: extension.js:217
+msgid "Report a bug..."
+msgstr "Signaler un bug..."
+
+#: extension.js:222
+msgid "El atareao"
+msgstr "El atareao"
+
+#: extension.js:224
+msgid "GitHub"
+msgstr "GitHub"
+
+#: extension.js:226
+msgid "Twitter"
+msgstr "Twitter"
+
+#: extension.js:228
+msgid "Telegram"
+msgstr "Telegram"
+
+#: extension.js:230
+msgid "Mastodon"
+msgstr "Mastodon"
+
+#: extension.js:232
+msgid "Spotify"
+msgstr "Spotify"
+
+#: extension.js:234
+msgid "YouTube"
+msgstr "YouTube"
+
+#: preferenceswidget.js:232
+msgid "Nothing"
+msgstr "Rien"
+
+#: preferenceswidget.js:245
+msgid "True"
+msgstr "Vrai"
+
+#: preferenceswidget.js:258
+msgid "False"
+msgstr "Faux"
+
+#: prefs.js:63
+msgid "WireGuard Indicator"
+msgstr "Indicateur WireGuard"
+
+#: prefs.js:68
+msgid "Version: "
+msgstr "Version: "
+
+#: prefs.js:79
+msgid "Atareao"
+msgstr "Atareao"
+
+#: prefs.js:86
+msgid "Copyright © 2020 Lorenzo Carbonell"
+msgstr "Copyright © 2020 Lorenzo Carbonell"
+
+#: prefs.js:93
+msgid ""
+"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS "
+"OR\n"
+msgstr ""
+
+#: prefs.js:94
+msgid ""
+"IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n"
+msgstr ""
+
+#: prefs.js:95
+msgid ""
+"FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL "
+"THE\n"
+msgstr ""
+
+#: prefs.js:96
+msgid ""
+"AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n"
+msgstr ""
+
+#: prefs.js:97
+msgid ""
+"LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\n"
+msgstr ""
+
+#: prefs.js:98
+msgid ""
+"FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER "
+"DEALINGS\n"
+msgstr ""
+
+#: prefs.js:99
+msgid "IN THE SOFTWARE.\n"
+msgstr ""
+
+#: prefs.js:129
+msgid "Preferences"
+msgstr "Préférences"
+
+#: prefs.js:133
+msgid "Indicator options"
+msgstr "Options de l'indicateur"
+
+#: prefs.js:136
+msgid "General options"
+msgstr "Options générales"
+
+#: prefs.js:142
+msgid "About"
+msgstr "A propos"
+
+#~ msgid "Loading..."
+#~ msgstr "Cargando"
