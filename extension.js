@@ -106,9 +106,9 @@ var WireGuardIndicator = GObject.registerClass(
         }
 
         _toggleSwitch(widget, value){
-            let setstatus = ((value == true) ? 'start': 'stop');
+            let setstatus = ((value == true) ? 'up': 'down');
             try {
-                let command = ['systemctl', setstatus, this._servicename];
+                let command = ['nmcli', 'connection', setstatus, this._servicename];
                 let proc = Gio.Subprocess.new(
                     command,
                     Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_PIPE
@@ -131,7 +131,7 @@ var WireGuardIndicator = GObject.registerClass(
             this._darkthem = this._getValue('darktheme')
 
             try {
-                let command = ['systemctl', 'status', this._servicename];
+                let command = ['nmcli', 'connection', 'show', '--active', this._servicename];
                 let proc = Gio.Subprocess.new(
                     command,
                     Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_PIPE
@@ -139,7 +139,7 @@ var WireGuardIndicator = GObject.registerClass(
                 proc.communicate_utf8_async(null, null, (proc, res) => {
                     try {
                         let [, stdout, stderr] = proc.communicate_utf8_finish(res);
-                        let active = (stdout.indexOf('Active: active') > -1);
+                        let active = (stdout.length > 3);
                         this._set_icon_indicator(active);
                     } catch (e) {
                         logError(e);
