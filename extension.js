@@ -59,6 +59,7 @@ var WireGuardIndicator = GObject.registerClass(
         _init(){
             super._init(St.Align.START);
             this._settings = Convenience.getSettings();
+            this._one_active = false;
 
             /* Icon indicator */
             let theme = Gtk.IconTheme.get_default();
@@ -151,8 +152,12 @@ var WireGuardIndicator = GObject.registerClass(
             return this._settings.get_value(keyName).deep_unpack();
         }
 
+        _activate_one() {
+            this._one_active = true;
+        }
+
         _update(){
-            this._set_icon_indicator(true);
+            this._one_active = false;
             this._servicesSwitches.forEach((serviceSwitch, index, array)=>{
                 let service = serviceSwitch.label.name;
                 try{
@@ -165,8 +170,8 @@ var WireGuardIndicator = GObject.registerClass(
                         try {
                             let [, stdout, stderr] = proc.communicate_utf8_finish(res);
                             let active = (stdout.indexOf('GENERAL.STATE') > -1);
-                            if(!active){
-                                this._set_icon_indicator(false);
+                            if(active){
+                                this._activate_one();
                             }
                             GObject.signal_handlers_block_by_func(serviceSwitch,
                                                           this._toggleSwitch);
@@ -175,6 +180,12 @@ var WireGuardIndicator = GObject.registerClass(
                                                             this._toggleSwitch);
                         } catch (e) {
                             logError(e);
+                        }
+                    
+                        if (this._one_active) {
+                            this._set_icon_indicator(true);
+                        } else {
+                            this._set_icon_indicator(false);
                         }
                     });
                 } catch (e) {
