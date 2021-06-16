@@ -23,8 +23,8 @@ msgid "Service name"
 msgstr "Nom du service"
 
 #: schemas/wireguard-indicator.gschema.xml:7
-msgid "Set the name of the systemd service"
-msgstr "Nom du service systemd"
+msgid "Set the name of the Network Manager connection"
+msgstr "Nom de la connexion Network Manager"
 
 #: schemas/wireguard-indicator.gschema.xml:11
 msgid "Check time"
