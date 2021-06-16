@@ -24,7 +24,7 @@ msgstr "Nombre del servicio"
 
 #: schemas/wireguard-indicator.gschema.xml:7
 #, fuzzy
-msgid "Set the name of the systemd services"
+msgid "Set the name of the Network Manager connection"
 msgstr "Indica el nombre del servicio Systemd de WireGuard"
 
 #: schemas/wireguard-indicator.gschema.xml:11
